@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!-- Sign In Modal -->
+<div id="signInModal" class="modal hidden fixed inset-0 overflow-auto bg-black bg-opacity-60 z-50">
+    <div class="mx-5">
+        <div class="modal-content relative z-[999] bg-white lg:w-[1020px] w-full mx-auto md:p-8 p-5 mt-20 mb-40">
+            <div class="flex justify-between items-center">
+                <h4 class="font-medium font-font_Clash text-24xl leading-34 text-primaryColor">Student Reviews</h4>
+                <div class="bg-SecondaryColor bg-opacity-25">
+                    <a href="#" onclick="closeModal('signInModal'); return false;"><img src="assets/img/close.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="flex lg:flex-row flex-col items-start justify-between gap-8 mt-4">
+                <div class="bg-[#F8F8F8] md:p-7 p-4 lg:w-410 w-full">
+                    <div class="">
+                        <div class="w-48 flex gap-4 items-center">
+                            <span class="bg-[#ECECEC] w-[60px] h-[60px] flex justify-center items-center font-font_Clash font-medium text-22xl leading-32 text-primaryColor">4.8</span>
+                            <svg width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                        </div>
+                        <p class="font-font_Clash text-base leading-7 text-secondaryColor font-normal pt-4">Based on 359 reviews</p>
+                    </div>
+                    <div class="w-full mt-4">
+                        <div class="flex md:flex-row flex-col gap-4 md:items-center">
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">5 Stars</p>
+                            <div class="md:hidden sm:block flex justify-between items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">5 Stars</p>
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">332</p>
+                            </div>
+                            <div class="relative bg-[#ECECEC] md:w-[240px] w-full h-2.5">
+                                <div class="absolute top-0 left-0 w-36 bg-btnBg h-full"></div>
+                            </div>
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">332</p>
+                        </div>
+                        <div class="flex md:flex-row flex-col gap-4 md:items-center md:mt-1.5 mt-4">
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">4 Stars</p>
+                            <div class="md:hidden sm:block flex justify-between items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">4 Stars</p>
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">120</p>
+                            </div>
+                            <div class="relative bg-[#ECECEC] md:w-[240px] w-full h-2.5">
+                                <div class="absolute top-0 left-0 w-32 bg-btnBg h-full"></div>
+                            </div>
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">120</p>
+                        </div>
+                        <div class="flex md:flex-row flex-col gap-4 md:items-center md:mt-1.5 mt-4">
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">3 Stars</p>
+                            <div class="md:hidden sm:block flex justify-between items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">3 Stars</p>
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">30</p>
+                            </div>
+                            <div class="relative bg-[#ECECEC] md:w-[240px] w-full h-2.5">
+                                <div class="absolute top-0 left-0 w-20 bg-btnBg h-full"></div>
+                            </div>
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">30</p>
+                        </div>
+                        <div class="flex md:flex-row flex-col gap-4 md:items-center md:mt-1.5 mt-4">
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">2 Stars</p>
+                            <div class="md:hidden sm:block flex justify-between items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">2 Stars</p>
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">5</p>
+                            </div>
+                            <div class="relative bg-[#ECECEC] md:w-[240px] w-full h-2.5">
+                                <div class="absolute top-0 left-0 w-12 bg-btnBg h-full"></div>
+                            </div>
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">5</p>
+                        </div>
+                        <div class="flex md:flex-row flex-col gap-4 md:items-center md:mt-1.5 mt-4">
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">1 Stars</p>
+                            <div class="md:hidden sm:block flex justify-between items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">1 Stars</p>
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</p>
+                            </div>
+                            <div class="relative bg-[#ECECEC] md:w-[240px] w-full h-2.5">
+                                
+                            </div>
+                            <p class="md:block hidden font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</p>
+                        </div>
+                    </div>
+                    <a href="#" onclick="openModal('signUpModal'); closeModal('signInModal'); return false;" class="mt-8 inline-block bg-primaryColor text-white font-font_Clash py-2 px-8 text-center font-medium text-base leading-7">Write a review</a>
+                </div>
+                <div class="">
+                    <div class="lg:w-520 w-full grid grid-cols-1 gap-y-8">
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">BS</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Ben Stokes</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">5 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">Awesome course</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"This course helped me take my business to the next level. The instructors were fantastic!"</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">7</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+            
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">JB</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Joe Burns</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">6 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">Amazing course</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"I loved the practical approach and the hands-on projects. Highly recommended!"</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+            
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">PM</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Peter Moor</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">7 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">Has been a cool course!</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"This course transformed my business! The lessons are practical, and the instructors are amazing."</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+            
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">SM</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Sami Gill</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">8 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">Wonderful course</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"I landed a job in digital marketing right after completing this course. Highly recommended!"</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">ST</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Sarah Taylor</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">8 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">A great course</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"This course was a game-changer! I went from knowing very little about digital marketing to confidently running my own campaigns. The lessons were clear, practical, and easy to follow."</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+    
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">LR</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Lana Rhoades</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">8 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">Highly recommend!</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"Digital Marketing Mastery gave me the tools I needed to boost my online presence. Within weeks, I saw a significant increase in website traffic and customer engagement!"</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+    
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">VR</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Valentina Rose</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">8 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">Love the course</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"I can’t recommend this course enough! It covered everything from SEO to social media strategies. Thanks to this course, my brand visibility skyrocketed."</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+    
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">AA</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Ayesha Akter</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">8 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">Nice course</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"The hands-on approach of this course made it easy to apply what I learned in real time. It’s an absolute must for anyone serious about mastering digital marketing."</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+    
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">MA</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Maria Akter</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">8 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">Over the moon</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"Before taking this course, I struggled with online advertising. Now, I’ve improved my ad campaigns, and my business is thriving. This course delivers results!"</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+    
+                        <div class="border border-borderColor md:p-[30px] p-4">
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 items-center">
+                                    <span class="bg-[#EFEFEF] rounded-full w-11 h-11 font-font_Clash font-medium text-sm leading-6 text-primaryColor flex items-center justify-center">TA</span>
+                                    <p class=" font-font_Clash font-medium text-base leading-7 text-primaryColor">Tahura Akter</p>
+                                </div>
+                                <p class="font-font_Clash font-normal text-sm leading-6 text-secondaryColor">8 days ago</p>
+                            </div>
+                            <svg class="mt-4" width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="#F9A600"/>
+                                <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="#F9A600"/>
+                                <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="#F9A600"/>
+                            </svg>
+                            <h4 class=" font-font_Clash font-medium text-base leading-7 text-primaryColor pt-4">Truly amazing!</h4>
+                            <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor pt-2">"What I loved most about Digital Marketing Mastery was the depth of knowledge provided. It’s ideal for both beginners and those looking to refine their skills. Highly recommended!"</p>
+                            <div class="mt-4 flex gap-4 items-center">
+                                <p class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">Helpful?</p>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 6.3C16 5.9287 15.8468 5.5726 15.574 5.31005C15.3012 5.0475 14.9312 4.9 14.5455 4.9H9.94909L10.6473 1.701C10.6618 1.631 10.6691 1.554 10.6691 1.477C10.6691 1.19 10.5455 0.924 10.3491 0.735L9.57818 0L4.79273 4.606C4.52364 4.865 4.36364 5.215 4.36364 5.6V12.6C4.36364 12.9713 4.51688 13.3274 4.78966 13.5899C5.06244 13.8525 5.43241 14 5.81818 14H12.3636C12.9673 14 13.4836 13.65 13.7018 13.146L15.8982 8.211C15.9636 8.05 16 7.882 16 7.7V6.3ZM0 14H2.90909V5.6H0V14Z" fill="#4D4B52"/>
+                                    </svg>
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 7.7C0 8.0713 0.153246 8.4274 0.426026 8.68995C0.698807 8.9525 1.06878 9.1 1.45455 9.1H6.05091L5.35273 12.299C5.33818 12.369 5.33091 12.446 5.33091 12.523C5.33091 12.81 5.45455 13.076 5.65091 13.265L6.42182 14L11.2073 9.394C11.4764 9.135 11.6364 8.785 11.6364 8.4V1.4C11.6364 1.0287 11.4831 0.672602 11.2103 0.410051C10.9376 0.1475 10.5676 0 10.1818 0H3.63636C3.03273 0 2.51636 0.349999 2.29818 0.854L0.101817 5.789C0.0363626 5.95 0 6.118 0 6.3V7.7ZM16 0H13.0909V8.4H16V0Z" fill="#4D4B52"/>
+                                    </svg>                                               
+                                    <span class="font-font_Clash font-normal text-base leading-7 text-secondaryColor">0</span>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <a href="#" class="mt-8 inline-block border border-borderColor text-primaryColor font-font_Clash py-2 px-8 text-center font-medium text-base leading-7">Show all reviews</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signUpModal" class="modal hidden fixed inset-0 overflow-auto bg-primaryColor bg-opacity-60 z-50 ">
+    <div class="mx-4">
+        <div class="modal-content relative bg-white lg:w-630 w-full mx-auto rounded-30px md:p-8 p-5 my-40">
+            <div class="flex justify-between items-center">
+                <h4 class="font-medium font-font_Clash text-24xl leading-34 text-primaryColor">Rate this course</h4>
+                <div class="bg-SecondaryColor bg-opacity-25">
+                    <a href="#" onclick="closeModal('signUpModal'); return false;"><img src="assets/img/close.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="flex gap-4 items-center mt-8">
+                <h4 class="font-font_Clash font-medium text-base leading-7 text-primaryColor">Quality:</h4>
+                <svg width="100" height="16" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.49119 0.354382C7.66134 -0.118126 8.33866 -0.118128 8.50881 0.354381L10.3347 5.42478C10.4112 5.63723 10.6149 5.77916 10.8435 5.77916H15.459C15.9771 5.77916 16.1978 6.42931 15.7842 6.73716L11.9691 9.57654C11.7931 9.70749 11.7155 9.93082 11.773 10.1407L13.1927 15.3262C13.3273 15.8175 12.7536 16.1974 12.3437 15.8884L8.32785 12.8621C8.1343 12.7162 7.86573 12.7163 7.67221 12.8622L3.65853 15.8883C3.24867 16.1973 2.67499 15.8177 2.80933 15.3263L4.22721 10.1406C4.28459 9.93077 4.20696 9.70754 4.03106 9.57662L0.215833 6.73717C-0.197819 6.42931 0.0228618 5.77916 0.541012 5.77916H5.15654C5.38506 5.77916 5.58884 5.63723 5.66535 5.42478L7.49119 0.354382Z" fill="black"/>
+                    <path d="M28.4912 0.354382C28.6613 -0.118126 29.3387 -0.118128 29.5088 0.354381L31.3347 5.42478C31.4112 5.63723 31.6149 5.77916 31.8435 5.77916H36.459C36.9771 5.77916 37.1978 6.42931 36.7842 6.73716L32.9691 9.57654C32.7931 9.70749 32.7155 9.93082 32.773 10.1407L34.1927 15.3262C34.3273 15.8175 33.7536 16.1974 33.3437 15.8884L29.3278 12.8621C29.1343 12.7162 28.8657 12.7163 28.6722 12.8622L24.6585 15.8883C24.2487 16.1973 23.675 15.8177 23.8093 15.3263L25.2272 10.1406C25.2846 9.93077 25.207 9.70754 25.0311 9.57662L21.2158 6.73717C20.8022 6.42931 21.0229 5.77916 21.541 5.77916H26.1565C26.3851 5.77916 26.5888 5.63723 26.6653 5.42478L28.4912 0.354382Z" fill="black"/>
+                    <path d="M49.4912 0.354382C49.6613 -0.118126 50.3387 -0.118128 50.5088 0.354381L52.3347 5.42478C52.4112 5.63723 52.6149 5.77916 52.8435 5.77916H57.459C57.9771 5.77916 58.1978 6.42931 57.7842 6.73716L53.9691 9.57654C53.7931 9.70749 53.7155 9.93082 53.773 10.1407L55.1927 15.3262C55.3273 15.8175 54.7536 16.1974 54.3437 15.8884L50.3278 12.8621C50.1343 12.7162 49.8657 12.7163 49.6722 12.8622L45.6585 15.8883C45.2487 16.1973 44.675 15.8177 44.8093 15.3263L46.2272 10.1406C46.2846 9.93077 46.207 9.70754 46.0311 9.57662L42.2158 6.73717C41.8022 6.42931 42.0229 5.77916 42.541 5.77916H47.1565C47.3851 5.77916 47.5888 5.63723 47.6653 5.42478L49.4912 0.354382Z" fill="black"/>
+                    <path d="M70.4912 0.354382C70.6613 -0.118126 71.3387 -0.118128 71.5088 0.354381L73.3347 5.42478C73.4112 5.63723 73.6149 5.77916 73.8435 5.77916H78.459C78.9771 5.77916 79.1978 6.42931 78.7842 6.73716L74.9691 9.57654C74.7931 9.70749 74.7155 9.93082 74.773 10.1407L76.1927 15.3262C76.3273 15.8175 75.7536 16.1974 75.3437 15.8884L71.3278 12.8621C71.1343 12.7162 70.8657 12.7163 70.6722 12.8622L66.6585 15.8883C66.2487 16.1973 65.675 15.8177 65.8093 15.3263L67.2272 10.1406C67.2846 9.93077 67.207 9.70754 67.0311 9.57662L63.2158 6.73717C62.8022 6.42931 63.0229 5.77916 63.541 5.77916H68.1565C68.3851 5.77916 68.5888 5.63723 68.6653 5.42478L70.4912 0.354382Z" fill="black"/>
+                    <path d="M91.4912 0.354382C91.6613 -0.118126 92.3387 -0.118128 92.5088 0.354381L94.3347 5.42478C94.4112 5.63723 94.6149 5.77916 94.8435 5.77916H99.459C99.9771 5.77916 100.198 6.42931 99.7842 6.73716L95.9691 9.57654C95.7931 9.70749 95.7155 9.93082 95.773 10.1407L97.1927 15.3262C97.3273 15.8175 96.7536 16.1974 96.3437 15.8884L92.3278 12.8621C92.1343 12.7162 91.8657 12.7163 91.6722 12.8622L87.6585 15.8883C87.2487 16.1973 86.675 15.8177 86.8093 15.3263L88.2272 10.1406C88.2846 9.93077 88.207 9.70754 88.0311 9.57662L84.2158 6.73717C83.8022 6.42931 84.0229 5.77916 84.541 5.77916H89.1565C89.3851 5.77916 89.5888 5.63723 89.6653 5.42478L91.4912 0.354382Z" fill="black"/>
+                </svg>
+            </div>
+            <div class="mt-8">
+                <form>
+                    <label for="" class="block text-primaryColor font-Manrope font-medium text-base leading-7">Review Title*</label>
+                    <input class="mt-4 w-full border border-borderColor focus:outline-none py-2.5 px-6 font-font_Clash font-normal text-lg leading-8 text-secondaryColor placeholder:text-lg placeholder:leading-8 placeholder:text-secondaryColor" type="text" placeholder="ex. Awesome course!">    
+                    <label for="" class="mt-8 block text-primaryColor font-Manrope font-medium text-base leading-7">Review Title*</label>
+                    <textarea name="" id=""  placeholder="Write something" class="h-48 mt-4 w-full border border-borderColor focus:outline-none py-3.5 px-6 font-font_Clash font-normal text-lg leading-8 text-secondaryColor placeholder:text-lg placeholder:leading-8 placeholder:text-secondaryColor"></textarea>
+                    <div class="flex gap-4 mt-8">
+                        <button  onclick="event.preventDefault()" class="font-font_Clash font-medium text-base leading-7 text-white bg-btnBg py-2 px-8 duration-500 rounded-100 hover:transform hover:scale-105 hover:transition hover:ease-in-out hover:duration-500 md:inline-block block md:w-auto w-full">Submit</button>
+                        <button  onclick="closeModal('signUpModal'); return false;" class="font-font_Clash font-medium text-base leading-7 text-primaryColor border border-borderColor py-2 px-8 duration-500 rounded-100 hover:transform hover:scale-105 hover:transition hover:ease-in-out hover:duration-500 md:inline-block block md:w-auto w-full">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
